@@ -10,8 +10,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: "Demo",
-      home: Scaffold (),
+      home: Scaffold (
+        body: Center(
+          child: Text("hello world",style: TextStyle(fontSize: 40),),
+        ),
+      ),
     );
   }
 }
