@@ -13,6 +13,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "Demo",
       home: Scaffold (
+        appBar: AppBar(
+          title: Text("Learn Flutter"),
+        
+        ),
         body: Center(
           child: Text("hello world",style: TextStyle(fontSize: 40),),
         ),
