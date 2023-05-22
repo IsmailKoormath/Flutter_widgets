@@ -16,7 +16,8 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text("Learn Flutter"),
           centerTitle: true,
-          backgroundColor: Colors.red,
+          backgroundColor: Colors.red[600],
+          leading: Icon(Icons.menu),
         
         ),
         body: Center(
