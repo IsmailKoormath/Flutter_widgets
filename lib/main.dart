@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold (
         appBar: AppBar(
           title: Text("Learn Flutter"),
+          centerTitle: true,
         
         ),
         body: Center(
