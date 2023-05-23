@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class RowWidget extends StatelessWidget {
-  const RowWidget({super.key});
+class TextWidget extends StatelessWidget {
+  const TextWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,27 +25,21 @@ class RowWidget extends StatelessWidget {
           elevation: 10.5,
         
         ),
-        body:Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Container(
-              width: 100,
-              height: 100,
-              color: Colors.blue,
-            ),
-            Container(
-              width: 100,
-              height: 100,
-              color: const Color.fromARGB(255, 33, 243, 184),
-            ),
-            Container(
-              width: 100,
-              height: 100,
-              color: const Color.fromARGB(255, 222, 33, 243),
-            )
-          ],
-        )
-        );
+        body: Center( child: Text("flutter app",style: TextStyle(fontSize: 40,
+        color: Colors.green,
+        fontStyle: FontStyle.italic,
+        letterSpacing: 5,
+        wordSpacing: 20,
+        backgroundColor: Colors.yellow,
+        shadows: const [
+          Shadow(
+            color:Colors.black,
+            offset: Offset(5, 5),
+            blurRadius: 5
+          )
+          
+        ]),))
+         );
       
   }
 }
