@@ -1,3 +1,6 @@
+import 'dart:html';
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 class ButtonWidget extends StatelessWidget {
@@ -25,8 +28,21 @@ class ButtonWidget extends StatelessWidget {
           elevation: 10.5,
         
         ),
-        body: 
-        );
+        body: Center(child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+         TextButton(
+          style: ButtonStyle(
+            textStyle: MaterialStateProperty.all((TextStyle(
+              fontSize: 30
+            ))),
+            foregroundColor: MaterialStateProperty.all(Colors.red)),
+            onPressed: (){
+              // log("clicked");
+            },
+            child: Text("Text button"))
+            ])
+       ) );
       
   }
 }
