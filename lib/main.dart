@@ -1,3 +1,4 @@
+import 'package:first_app/widgets/rowcoloumn.dart';
 import 'package:flutter/material.dart';
 import './widgets/container.dart';
 
@@ -13,7 +14,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Demo",
-      home: MyWidget()
+      home: RowWidget(),
+      // home: MyWidget(),
+   
+
     );
   }
 }
