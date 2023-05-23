@@ -26,7 +26,29 @@ class MyWidget extends StatelessWidget {
         
         ),
         body: Center(
-          child: Text("Somthing",style: TextStyle(fontSize: 40),),
+          
+          child:Container(
+            // color: Colors.green,
+            height: 300,
+            // width: double.infinity,
+            width: 300,
+            margin: EdgeInsets.all(20),
+            padding: EdgeInsets.all(20),
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              color:  Colors.red,
+              border: Border.all(color:Colors.green,width: 5),
+              borderRadius: BorderRadius.circular(50),
+              boxShadow:const [
+                BoxShadow(
+                  color: Colors.black,offset:Offset (5, 5),blurRadius: 20
+                )
+              ]
+            ),
+
+          child: Text("Somthing",style: TextStyle(fontSize: 40, color: Colors.white),),
+
+          ),
         ),
       );
   }
