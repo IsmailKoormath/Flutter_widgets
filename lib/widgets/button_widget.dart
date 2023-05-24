@@ -63,7 +63,21 @@ class ButtonWidget extends StatelessWidget {
                 ),
                 onPressed: (){
                   log(4);
-                }, child: Text("Sign In"))
+                }, child: Text("Sign In")),
+
+                OutlinedButton(
+                  style: ButtonStyle(
+                   shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10)
+                   )),
+                   side: MaterialStateProperty.all(BorderSide(color: Colors.yellow,
+                   width: 2)),
+                   textStyle: MaterialStateProperty.all(TextStyle(fontSize: 12)),
+                    minimumSize: MaterialStateProperty.all(Size(200,40)),
+                   foregroundColor: MaterialStateProperty.all(Colors.black)
+                  
+                  ),
+                  onPressed: (){}, child: Text("Login"))
         ])
        ) );
       
