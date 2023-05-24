@@ -40,8 +40,31 @@ class ButtonWidget extends StatelessWidget {
             onPressed: (){
               // log("clicked");
             },
-            child: Text("Text button"))
-            ])
+            child: Text("Text button")),
+            TextButton.icon(
+              style: ButtonStyle(
+                textStyle: MaterialStateProperty.all((TextStyle(
+                fontSize: 30,
+              ))),
+              foregroundColor: MaterialStateProperty.all(Colors.red)),
+              onPressed: (){}, icon: Icon(Icons.home), label: Text("Home") ),
+              ElevatedButton(
+                style: ButtonStyle(
+                  padding: MaterialStateProperty.all(EdgeInsets.only(
+                    left: 50,
+                    right: 50,
+                    top: 10,
+                    bottom: 10,
+                  )),
+                  foregroundColor: MaterialStateProperty.all(Colors.white),
+                  backgroundColor: MaterialStateProperty.all(Colors.red),
+                  // minimumSize: MaterialStateProperty.all(Size(200,40))
+                  textStyle: MaterialStateProperty.all(TextStyle(fontSize: 15))
+                ),
+                onPressed: (){
+                  log(4);
+                }, child: Text("Sign In"))
+        ])
        ) );
       
   }
