@@ -39,6 +39,13 @@ class CircleAvatarWidget extends StatelessWidget {
     backgroundImage: AssetImage('images/avatar.png'),),
     
   ),
+     Padding(
+      padding: EdgeInsets.all(10.0),
+  child: CircleAvatar(
+    radius: 60,
+    backgroundImage: NetworkImage('https://thumbs.dreamstime.com/b/businessman-icon-vector-male-avatar-profile-image-profile-businessman-icon-vector-male-avatar-profile-image-182095609.jpg'),),
+    
+  ),
 
              
         ],);
