@@ -1,4 +1,5 @@
 import 'package:first_app/home_Page.dart';
+import 'package:first_app/social.dart';
 import 'package:first_app/widgets/button_widget.dart';
 import 'package:first_app/widgets/rowcoloumn.dart';
 import 'package:first_app/widgets/text.dart';
@@ -21,7 +22,8 @@ class MyApp extends StatelessWidget {
       
     //  title: "Demo",
       // home: ButtonWidget(),
-      home: HomePage()
+      // home: HomePage()
+      home: SocialWidget()
       // home: TextWidget(),
       // home: RowWidget(),
       // home: MyWidget(),
