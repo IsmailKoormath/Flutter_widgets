@@ -18,7 +18,7 @@ class ImageWidget extends StatelessWidget {
           height: 300,
           width: 300,
           color: Colors.cyan,
-          child: Image.network('images/car.jpg',
+          child: Image.network('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9zdHuCkRAfawF33wo27ShmxZP0wmvb8msUFU45f6NK7nuet5M3iFjvyUZj0CgCotVSvw&usqp=CAU',
           fit: BoxFit.cover,),
         )
       ]),

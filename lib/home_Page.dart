@@ -1,4 +1,5 @@
 import 'package:first_app/widgets/button_widget.dart';
+import 'package:first_app/widgets/cart.dart';
 import 'package:first_app/widgets/image.dart';
 import 'package:first_app/widgets/text_field.dart';
 import 'package:flutter/material.dart';
@@ -42,6 +43,7 @@ class HomePage extends StatelessWidget {
             SizedBox(height: 20,),
             ButtonWidget(text2:"Text button",),
             ImageWidget(),
+            CardWidget(),
            
 
         
