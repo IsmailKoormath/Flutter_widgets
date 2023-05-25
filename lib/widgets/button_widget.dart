@@ -1,34 +1,15 @@
-import 'dart:html';
-import 'dart:math';
+
 
 import 'package:flutter/material.dart';
 
 class ButtonWidget extends StatelessWidget {
-  const ButtonWidget({super.key});
+  String text2;
+   ButtonWidget({super.key, required this.text2});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold (
-        appBar: AppBar(
-          title: Text("Sample App"),
-          centerTitle: true,
-          backgroundColor: Colors.red[600],
-          leading: Icon(Icons.menu),
-          actions: [
-            IconButton(onPressed: (){}, icon: Icon(Icons.search)),
-            IconButton(onPressed: (){}, icon: Icon(Icons.more_vert))
-          ],
-
-          shape:RoundedRectangleBorder(borderRadius: BorderRadius.vertical(
-            bottom: Radius.circular(20),
-            top: Radius.circular(20)
-          )),
-          
-          // shadow effect
-          elevation: 10.5,
-        
-        ),
-        body: Center(child: Column(
+    return
+     Center(child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
          TextButton(
@@ -40,14 +21,15 @@ class ButtonWidget extends StatelessWidget {
             onPressed: (){
               // log("clicked");
             },
-            child: Text("Text button")),
+            child: Text(text2),),
+               SizedBox(height: 50,),
             TextButton.icon(
               style: ButtonStyle(
                 textStyle: MaterialStateProperty.all((TextStyle(
                 fontSize: 30,
               ))),
-              foregroundColor: MaterialStateProperty.all(Colors.red)),
-              onPressed: (){}, icon: Icon(Icons.home), label: Text("Home") ),
+              foregroundColor: MaterialStateProperty.all(Colors.red),),
+              onPressed: (){}, icon: Icon(Icons.home), label: Text("Home"), ),   SizedBox(height: 50,),
               ElevatedButton(
                 style: ButtonStyle(
                   padding: MaterialStateProperty.all(EdgeInsets.only(
@@ -56,14 +38,15 @@ class ButtonWidget extends StatelessWidget {
                     top: 10,
                     bottom: 10,
                   )),
-                  foregroundColor: MaterialStateProperty.all(Colors.white),
+              foregroundColor: MaterialStateProperty.all(Colors.white),
                   backgroundColor: MaterialStateProperty.all(Colors.red),
                   // minimumSize: MaterialStateProperty.all(Size(200,40))
-                  textStyle: MaterialStateProperty.all(TextStyle(fontSize: 15))
+                  textStyle: MaterialStateProperty.all(TextStyle(fontSize: 15),),
                 ),
                 onPressed: (){
-                  log(4);
+                 print("bvx");
                 }, child: Text("Sign In")),
+                SizedBox(height: 50,),
 
                 OutlinedButton(
                   style: ButtonStyle(
@@ -79,7 +62,7 @@ class ButtonWidget extends StatelessWidget {
                   ),
                   onPressed: (){}, child: Text("Login"))
         ])
-       ) );
+       ) ;
       
   }
 }
