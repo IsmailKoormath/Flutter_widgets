@@ -83,11 +83,8 @@ class SocialWidget extends StatelessWidget {
                     padding: EdgeInsets.all(8.0),
                     child: CircleAvatar(radius: 39,backgroundColor: Color.fromARGB(255, 200, 28, 85),
                     child:CircleAvatar(backgroundImage: AssetImage("images/avatar.png"),radius: 35,)),
-                  ),
-                 
-                  
-                ],
-                
+                  ),                                 
+                ],               
               ),
             ),
           ),
@@ -118,9 +115,7 @@ class SocialWidget extends StatelessWidget {
                    
                   )
                 ],
-               
-          
-               
+                            
               ),
             ),
           ),
