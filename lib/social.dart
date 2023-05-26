@@ -108,11 +108,14 @@ class SocialWidget extends StatelessWidget {
                     title: Text("super car ..."),
                   ),
                   Image.asset("images/car.jpg"),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                   children: [IconButton(onPressed: (){}, icon:Icon(Icons.thumb_up) ),
-                   IconButton(onPressed: (){}, icon:Icon(Icons.thumb_down) ),
-                   ],
+                   Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                   IconButton(onPressed: (){}, icon:Icon(Icons.favorite_border) ),
+
+                   IconButton(onPressed: (){}, icon:Icon(Icons.comment) ),],
+                   
+                   
                   )
                 ],
                
