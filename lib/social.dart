@@ -29,6 +29,42 @@ class SocialWidget extends StatelessWidget {
           elevation: 10.5,
         
         ),
+        drawer: Drawer(
+          backgroundColor: Colors.pink,
+          child: ListView(
+            children: const [
+              UserAccountsDrawerHeader(accountName: Text("Ismail"), accountEmail: Text("ismail@gmail.com"),
+                currentAccountPicture: CircleAvatar(
+                  backgroundImage:AssetImage('images/avatar.png') ,
+                  backgroundColor: Colors.white,
+                ),),
+           ListTile(
+            leading: Icon(Icons.person),
+            iconColor: Colors.white,
+            title: Text("Profile",style: TextStyle(fontSize: 16),),
+            textColor: Colors.white,
+           ),
+           ListTile(
+            leading: Icon(Icons.dashboard),
+            iconColor: Colors.white,
+            title: Text("Dashboard",style: TextStyle(fontSize: 16),),
+            textColor: Colors.white,
+           ),
+           ListTile(
+            leading: Icon(Icons.settings),
+            iconColor: Colors.white,
+            title: Text("Settings",style: TextStyle(fontSize: 16),),
+            textColor: Colors.white,
+           ),
+           ListTile(
+            leading: Icon(Icons.logout),
+            iconColor: Colors.white,
+            title: Text("Signout",style: TextStyle(fontSize: 16),),
+            textColor: Colors.white,
+           ),
+            ],
+          ),
+        ),
         body:
         
          ListView( children: [
