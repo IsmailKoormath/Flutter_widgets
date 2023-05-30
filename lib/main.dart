@@ -1,5 +1,6 @@
 import 'package:first_app/home_Page.dart';
 import 'package:first_app/social.dart';
+import 'package:first_app/widgets/bottomNavigationbar.dart';
 import 'package:first_app/widgets/button_widget.dart';
 import 'package:first_app/widgets/checkbox_widget.dart';
 import 'package:first_app/widgets/rowcoloumn.dart';
@@ -30,7 +31,8 @@ class MyApp extends StatelessWidget {
       // home: RowWidget(),
       // home: MyWidget(),
       // home: FullWidget(),
-      home: CheckWidget(),
+      // home: CheckWidget(),
+      home: BottomNavigationWidget(),
    
 
     );
