@@ -1,5 +1,7 @@
 import 'package:first_app/home_Page.dart';
 import 'package:first_app/social.dart';
+import 'package:first_app/widgets/Navigation.dart';
+import 'package:first_app/widgets/Radiobutton.dart';
 import 'package:first_app/widgets/bottomNavigationbar.dart';
 import 'package:first_app/widgets/button_widget.dart';
 import 'package:first_app/widgets/checkbox_widget.dart';
@@ -20,7 +22,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      
+      title: "demo",
+      routes: {
+        '/':(context) => const TextWidget(),
+        '/radio':(context) => const RadioWidget()
+      },
+      initialRoute: '/',
       debugShowCheckedModeBanner: false,
       
     //  title: "Demo",
@@ -32,7 +39,10 @@ class MyApp extends StatelessWidget {
       // home: MyWidget(),
       // home: FullWidget(),
       // home: CheckWidget(),
-      home: BottomNavigationWidget(),
+      // home: BottomNavigationWidget(),
+      // home: RadioWidget(),
+      // home: Navigation(),
+      
    
 
     );
