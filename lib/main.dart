@@ -1,3 +1,5 @@
+import 'package:first_app/addDonator.dart';
+import 'package:first_app/bloodDotation.dart';
 import 'package:first_app/home_Page.dart';
 import 'package:first_app/social.dart';
 import 'package:first_app/widgets/Navigation.dart';
@@ -24,13 +26,18 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "demo",
       routes: {
-        '/':(context) => const TextWidget(),
-        '/radio':(context) => const RadioWidget()
+         '/':(context) => const BloodDonation(),
+         '/add':(context) => const AddDonator(),
+        // '/':(context) => const TextWidget(),
+        // '/radio':(context) => const RadioWidget()
+       
       },
       initialRoute: '/',
       debugShowCheckedModeBanner: false,
       
+        
     //  title: "Demo",
+    // home: BloodDonation(),
       // home: ButtonWidget(),
       // home: HomePage()
       // home: SocialWidget()
@@ -42,6 +49,7 @@ class MyApp extends StatelessWidget {
       // home: BottomNavigationWidget(),
       // home: RadioWidget(),
       // home: Navigation(),
+    
       
    
 
