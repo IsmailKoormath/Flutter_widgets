@@ -1,3 +1,6 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_core/firebase_core.dart';
+
 import 'package:first_app/addDonator.dart';
 import 'package:first_app/bloodDotation.dart';
 import 'package:first_app/home_Page.dart';
@@ -14,7 +17,9 @@ import 'package:first_app/widgets/text_field.dart';
 import 'package:flutter/material.dart';
 import './widgets/container.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 
