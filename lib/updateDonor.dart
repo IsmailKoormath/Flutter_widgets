@@ -1,14 +1,14 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
-class AddDonator extends StatefulWidget {
-  const AddDonator({super.key});
+class UpdateDonor extends StatefulWidget {
+  const UpdateDonor({super.key});
 
   @override
-  State<AddDonator> createState() => _AddDonatorState();
+  State<UpdateDonor> createState() => _UpdateDonorState();
 }
 
-class _AddDonatorState extends State<AddDonator> {
+class _UpdateDonorState extends State<UpdateDonor> {
 final bloodgroups = ['A+','A-','B+','B-','O+','O-','AB+','AB-'];
 String? selectedGroup;
   final CollectionReference donor = FirebaseFirestore.instance.collection('donor');
@@ -16,17 +16,27 @@ String? selectedGroup;
   TextEditingController donorName = TextEditingController();
   TextEditingController donorPhone = TextEditingController();
 
-void addDonor(){
-  final data = {
-    'name':donorName.text,'phone':donorPhone.text,'group': selectedGroup};
-  donor.add(data);
+void updateDonor(docId){
+  final data ={
+    'name':donorName.text,
+    'phone':donorPhone.text,
+    'group':selectedGroup
+  };
+  donor.doc(docId).update(data).then((value) => Navigator.pop(context));
 }
 
   @override
   Widget build(BuildContext context) {
+
+    final args = ModalRoute.of(context)!.settings.arguments as Map;
+    donorName.text = args['name'];
+    donorPhone.text = args['phone'];
+    selectedGroup = args['group'];
+    final docid = args['id'];
+
     return Scaffold(
       appBar: AppBar(
-        title: Text("Add Donator"),
+        title: Text("Update Donator"),
         backgroundColor: Colors.orange,
       ),
       body: Padding(
@@ -55,8 +65,8 @@ void addDonor(){
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: DropdownButtonFormField(decoration: InputDecoration(label: Text("Select blood group")), items: bloodgroups.map((e) => DropdownMenuItem(
-                
+              child: DropdownButtonFormField(value: selectedGroup,decoration: InputDecoration(label: Text("Select blood group")), items: bloodgroups.map((e) => DropdownMenuItem(
+               
                 child: Text(e),value: e,)).toList(), onChanged: (val){
                 selectedGroup = val;
               }),
@@ -64,9 +74,9 @@ void addDonor(){
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: ElevatedButton(onPressed: (){
-                addDonor();
-                Navigator.pop(context);
-              }, child: Text("Submit"),style: ButtonStyle(minimumSize: MaterialStateProperty.all(Size(double.infinity, 50)),
+             updateDonor(docid);
+             
+              }, child: Text("Update"),style: ButtonStyle(minimumSize: MaterialStateProperty.all(Size(double.infinity, 50)),
               backgroundColor: MaterialStateProperty.all(Colors.orange)),),
             )
           ]),

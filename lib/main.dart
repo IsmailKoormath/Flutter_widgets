@@ -5,6 +5,7 @@ import 'package:first_app/addDonator.dart';
 import 'package:first_app/bloodDotation.dart';
 import 'package:first_app/home_Page.dart';
 import 'package:first_app/social.dart';
+import 'package:first_app/updateDonor.dart';
 import 'package:first_app/widgets/Navigation.dart';
 import 'package:first_app/widgets/Radiobutton.dart';
 import 'package:first_app/widgets/bottomNavigationbar.dart';
@@ -33,8 +34,8 @@ class MyApp extends StatelessWidget {
       routes: {
          '/':(context) => const BloodDonation(),
          '/add':(context) => const AddDonator(),
-        // '/':(context) => const TextWidget(),
-        // '/radio':(context) => const RadioWidget()
+         '/update':(context) => const UpdateDonor()
+
        
       },
       initialRoute: '/',
