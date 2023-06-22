@@ -16,8 +16,8 @@ class FloatingAction extends StatelessWidget {
         Text('couter'),
         Text(_counter as String),
         FloatingActionButton(onPressed: (){
-,/;p          _incrementCounter();
-        }, child:Icon(Icons.add),)-
+         _incrementCounter();
+        }, child:Icon(Icons.add),)
 
       ]),
     );
