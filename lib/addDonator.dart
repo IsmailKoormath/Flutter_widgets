@@ -55,9 +55,15 @@ void addDonor(){
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: DropdownButtonFormField(decoration: InputDecoration(label: Text("Select blood group")), items: bloodgroups.map((e) => DropdownMenuItem(
+              child: DropdownButtonFormField(
+                decoration: InputDecoration(
+                  label: Text("Select blood group")),
+                   items: bloodgroups.map((e) => DropdownMenuItem(
                 
-                child: Text(e),value: e,)).toList(), onChanged: (val){
+                child: Text(e),
+                value: e,
+                )).toList(),
+                 onChanged: (val){
                 selectedGroup = val;
               }),
             ),
