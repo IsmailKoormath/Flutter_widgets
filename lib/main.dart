@@ -22,9 +22,9 @@ import 'package:hive_flutter/hive_flutter.dart';
 import './widgets/container.dart';
 
 Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   await Hive.initFlutter();
-  if(!Hive.isAdapterRegistered(StudentModelAdapter().typeId))
-  {
+  if (!Hive.isAdapterRegistered(StudentModelAdapter().typeId)) {
     Hive.registerAdapter(StudentModelAdapter());
   }
 
@@ -41,18 +41,15 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "demo",
       routes: {
-         '/':(context) =>  FloatingAction(),
-         '/add':(context) => const AddDonator(),
-         '/update':(context) => const UpdateDonor()
-
-       
+        '/': (context) => FloatingAction(),
+        '/add': (context) => const AddDonator(),
+        '/update': (context) => const UpdateDonor()
       },
       initialRoute: '/',
       debugShowCheckedModeBanner: false,
-      
-        
-    //  title: "Demo",
-    // home: BloodDonation(),
+
+      //  title: "Demo",
+      // home: BloodDonation(),
       // home: ButtonWidget(),
       // home: HomePage()
       // home: SocialWidget()
@@ -64,10 +61,6 @@ class MyApp extends StatelessWidget {
       // home: BottomNavigationWidget(),
       // home: RadioWidget(),
       // home: Navigation(),
-    
-      
-   
-
     );
   }
 }
