@@ -3,6 +3,7 @@ import 'package:firebase_core/firebase_core.dart';
 
 import 'package:first_app/addDonator.dart';
 import 'package:first_app/bloodDotation.dart';
+import 'package:first_app/db/model/data_model.dart';
 import 'package:first_app/home_Page.dart';
 import 'package:first_app/social.dart';
 import 'package:first_app/updateDonor.dart';
@@ -17,11 +18,18 @@ import 'package:first_app/widgets/statefull_widget.dart';
 import 'package:first_app/widgets/text.dart';
 import 'package:first_app/widgets/text_field.dart';
 import 'package:flutter/material.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import './widgets/container.dart';
 
 Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  await Hive.initFlutter();
+  if(!Hive.isAdapterRegistered(StudentModelAdapter().typeId))
+  {
+    Hive.registerAdapter(StudentModelAdapter());
+  }
+
+  // WidgetsFlutterBinding.ensureInitialized();
+  // await Firebase.initializeApp();
   runApp(MyApp());
 }
 
